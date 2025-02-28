@@ -1,7 +1,7 @@
 # WebEdit
-<h3>A "Fancy" text editor, I made it to teach myself how to write web apps.<br>
-  
-<br><h2>[You can use it online here!](https://greenputer.github.io/WebEdit/)<br></h2>
+<h3>A "Fancy" text editor, I made it to teach myself how to write web apps.<br><br>
+
+[You can use it online here!](https://greenputer.github.io/WebEdit/)<br></h3>
 <h3>Features:</h3>
 <h4>･ Zero telemetry.<br>
 ･ Built-in symbols to copy.<br>
