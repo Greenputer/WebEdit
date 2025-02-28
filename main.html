@@ -3,11 +3,12 @@
 @import 'main.css';
 </style>
 <script src="main.js"></script>
+
 <!--MAIN WINDOW-->
 <div class="contextMenu" onclick="toggleHide()" id="burger">    <img src="burger.svg" width="25" height="21">    </div>
 <div id="children" style="transition: 500ms; opacity: 1; display: block;">
 <div class="context" id="everything" onclick="onNewPress();">New</div>
-<div class="context">Open</div>
+<div class="context" onclick="onOpenPress();">Open</div>
 <div class="context" onclick="onSavePress();">Save</div>
 <div class="context" onclick="newTab();">New Tab</div>
 <div class="spacer"></div>
@@ -20,8 +21,8 @@
 </div>
 
 <div class= "AlignR">
-<div class="context">Useful Symbols</div>
-<div class="context">Github</div>
+<div class="context" onclick="openUseful();">Useful Symbols</div>
+<div class="context" onclick="window.open('https://github.com/Greenputer/WebEdit', '_blank').focus();">Github</div>
 </div>
 </div>
 <div class="void" id="void"></div>
@@ -52,5 +53,34 @@
 </div>
 </div>
 </div>
+
+<!--MESSAGE SYSTEM-->
+<div class="messageSystem" id="messageSystem"></div>
+
+<!--USEFUL DIALOG-->
+
+<div class= "dialogBackground" id="usefulDialog">
+<div class= "warning">
+<div class= "zoomLabel" style="text-align: center;">Press any symbol to copy
+<br>
+<div class="context" style="font-size: 30px; text-align: center; width: 50px; margin-top: 20px; margin-left: 15%; outline: 2px solid white; border-radius: 10px;" onclick="triggerCopy('✓');">✓</div>
+<div class="context" style="font-size: 30px; text-align: center; width: 50px; margin-top: 20px; margin-left: 15%; outline: 2px solid white; border-radius: 10px;" onclick="triggerCopy('⨯');">⨯</div>
+<br>
+<div class="context" style="font-size: 30px; text-align: center; width: 50px; margin-top: 10px; margin-left: 15%; outline: 2px solid white; border-radius: 10px;" onclick="triggerCopy('🗹');">🗹</div>
+<div class="context" style="font-size: 30px; text-align: center; width: 50px; margin-top: 10px; margin-left: 15%; outline: 2px solid white; border-radius: 10px;" onclick="triggerCopy('･');">･</div>
+<br>
+<div class="context" style="font-size: 30px; text-align: center; width: 50px; margin-top: 10px; margin-left: 15%; outline: 2px solid white; border-radius: 10px;" onclick="triggerCopy('🠨');">🠨</div>
+<div class="context" style="font-size: 30px; text-align: center; width: 50px; margin-top: 10px; margin-left: 15%; outline: 2px solid white; border-radius: 10px;" onclick="triggerCopy('🠪');">🠪</div>
+<br>
+<div class="context" style="font-size: 30px; text-align: center; width: 50px; margin-top: 10px; margin-left: 15%; outline: 2px solid white; border-radius: 10px;" onclick="triggerCopy('🠩');">🠩</div>
+<div class="context" style="font-size: 30px; text-align: center; width: 50px; margin-top: 10px; margin-left: 15%; outline: 2px solid white; border-radius: 10px;" onclick="triggerCopy('🠫');">🠫</div>
+<br>
+<div class="context" style="font-size: 30px; text-align: center; width: 50px; margin-top: 10px; margin-left: 15%; outline: 2px solid white; border-radius: 10px;" onclick="triggerCopy('≈');">≈</div>
+<div class="context" style="font-size: 30px; text-align: center; width: 50px; margin-top: 10px; margin-left: 15%; outline: 2px solid white; border-radius: 10px;" onclick="triggerCopy('≠');">≠</div>
+<br>
+</div>
+</div>
+</div>
+
 
 </html>
