@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'Noto Sans Mono';
+    src: url('NotoSansMono-Regular.eot'), url('NotoSansMono-Regular.ttf') format('truetype'), url(NotoSansMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: mono;
+}
+@font-face {
+    font-family: 'Noto Sans Regular';
+    src: url('NotoSans-Regular.eot'), url('NotoSans-Regular.ttf') format('truetype'), url(NotoSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: mono;
+}
+
+.contextMenu{
+    font-size: 42px;
+    color: white;
+    width: 40px;
+    height: 46px;
+    text-align: center;
+    line-height: 34px;
+    border-radius: 10px;
+    transition: 300ms;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    user-select: none;
+    font-family: "Noto Sans Regular";
+}
+
+.context{
+    font-size: 20px;
+    color: white;
+    height: 46px;
+    text-align: center;
+    line-height: 46px;
+    border-radius: 10px;
+    transition: 300ms;
+    float: left;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-family: "Noto Sans Regular";
+    user-select: none;
+}
+.input{
+    font-size: 20px;
+    box-sizing: border-box;
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 72px);
+    max-height: calc(100vh - 72px);
+   resize: none;
+    background: #131313;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    outline: 2px solid white;
+    padding: 8px;
+    transition: 300ms;
+    font-family: "Noto Sans Mono";
+}
+.contextMenu:hover{
+    background: #1f1f1f;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.context:hover{
+    background: #1f1f1f;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+html{
+    background: #131313;
+}
+
+.AlignR{
+    position:absolute;
+    top: 8px;
+    right: 0px;
+}
+
+.zoom{
+    font-size: 20px;
+    color: white;
+    height: 40px;
+    width: 35px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 10px;
+    float: left;
+    margin-top: 3px;
+    margin-bottom: 8px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-family: "Noto Sans Regular";
+    user-select: none;
+
+}
+.zoomLabel{
+    font-size: 20px;
+    color: white;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 10px;
+    transition: 300ms;
+    float: left;
+    margin-top: 3px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    padding-right: 10px;
+    padding-left: 50px;
+    font-family: "Noto Sans Regular";
+    user-select: none;
+}
+
+
+.zoomBtn{
+    font-size: 32px;
+    color: white;
+    height: 38px;
+    width: 17px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 10px;
+    transition: 300ms;
+    float: left;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-top: 4px;
+    font-family: "Noto Sans Regular";
+    user-select: none;
+}
+
+.zoomBtn:hover{
+    background: #1f1f1f;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.zoomBorder{
+    float: left;
+    height: 46px;
+    outline: 2px solid white;
+    border-radius: 10px;
+}
+
+.void{
+    height: 0px;
+    /*transition: 100ms;*/
+}
+
+.dialogBackground{
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    display: none;
+    background-color: rgba(0,0,0,0.9);
+    transition: 200ms;
+}
+.warning{
+    position: fixed;
+    z-index: 1;
+    left: calc(50% - 190px);
+    top: calc(50% - 100px);
+}
+.saveInput{
+    font-size: 20px;
+    box-sizing: border-box;
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    background: #131313;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    outline: 2px solid white;
+    padding: 8px;
+    transition: 300ms;
+    font-family: "Noto Sans Mono";
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

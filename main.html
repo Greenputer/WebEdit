@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<style>
+@import 'main.css';
+</style>
+<script src="main.js"></script>
+<!--MAIN WINDOW-->
+<div class="contextMenu" onclick="toggleHide()" id="burger">    <img src="burger.svg" width="25" height="21">    </div>
+<div id="children" style="transition: 500ms; opacity: 1; display: block;">
+<div class="context" id="everything" onclick="onNewPress();">New</div>
+<div class="context">Open</div>
+<div class="context" onclick="onSavePress();">Save</div>
+<div class="context" onclick="newTab();">New Tab</div>
+<div class="spacer"></div>
+<div class="zoomLabel">Font Size:</div>
+
+<div class="zoomBorder">
+<div class="zoom" id="zoomLabel">20</div>
+<div class="zoomBtn" onclick="updateFontSize(1);" style="line-height: 30px;">  <img src="plus.svg" width="17" height="17">   </div>
+<div class="zoomBtn" onclick="updateFontSize(-1);" style="line-height: 20px;"> <img src="minus.svg" width="15" height="7">   </div>
+</div>
+
+<div class= "AlignR">
+<div class="context">Useful Symbols</div>
+<div class="context">Github</div>
+</div>
+</div>
+<div class="void" id="void"></div>
+
+<textarea autofocus id="inputBox" class="input"></textarea>
+
+
+<!--UNSAVED WORK WARNING-->
+<div class= "dialogBackground" id="warningDialog">
+<div class= "warning">
+<div class= "zoomLabel" style="text-align: center;">Are you sure? <br> Any unsaved work will be lost
+<br>
+<div class="context" style="margin-top: 10px; margin-left: 15%; outline: 2px solid white; border-radius: 10px;" onclick="cancelNew();">Cancel</div>
+<div class="context" style="margin-top: 10px; margin-left: 10%; color: #ff2f32; outline: 2px solid white; border-radius: 10px;" onclick="confirmNew();">Discard</div>
+</div>
+</div>
+</div>
+
+
+<!--SAVE FILE DIALOG-->
+<div class= "dialogBackground" id="saveDialog">
+<div class= "warning">
+<div class= "zoomLabel" style="text-align: center;">Enter file name:
+<br>
+<input class="saveInput" id="saveInput">
+<div class="context" style="margin-top: 10px; margin-left: 17%; outline: 2px solid white; border-radius: 10px;" onclick="cancelSave();">Cancel</div>
+<div class="context" style="color: #00aa00; margin-top: 10px; margin-left: 10%; outline: 2px solid white; border-radius: 10px;" onclick="confirmSave();">Save File</div>
+</div>
+</div>
+</div>
+
+</html>
