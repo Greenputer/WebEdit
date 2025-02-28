@@ -2,6 +2,10 @@ let fontSize = 9;
 const fontSizes = [6,8,9,10,11,12,14,16,18,20,22,24,26,28,32,36,41,48,60,72,96,120,144,200,300,400,600] // 24
 let hidden = false;
 let fileName;
+let input = document.createElement('input');
+let openFile = false;
+let content;
+let messageOn = false;
 function updateFontSize(step){
     if((fontSize + step) >= fontSizes.length || (fontSize + step) < 0){
         return;
@@ -92,8 +96,10 @@ function newTab(){
 }
 
 function onNewPress(){
+     if(document.getElementById("inputBox").value != ""){
     document.getElementById("warningDialog").style.opacity = "0";
     document.getElementById("warningDialog").style.display = "inline";
+     }
     setTimeout(openNewDialog,10);
 }
 
@@ -103,7 +109,13 @@ function cancelNew(){
 }
 
 function confirmNew(){
+    if(openFile == false){
     document.getElementById("inputBox").value = "";
+    }
+    else{
+        openFile = false;
+        document.getElementById("inputBox").value = content;
+    }
     document.getElementById("warningDialog").style.opacity = "0";
     setTimeout(closeNewDialog,200);
 }
@@ -157,3 +169,89 @@ function closeSaveDialog(){
 function actuallyDisableSaveDialog(){
     document.getElementById("saveDialog").style.display = "none";
 }
+
+function onOpenPress(){
+    input.type = 'file';
+    input.click();
+}
+
+input.onchange = e => {
+    var file = e.target.files[0];
+    var reader = new FileReader();
+    if(file.type.substring(0,4) == "text"){
+    reader.readAsText(file,'UTF-8');
+    }
+    else{
+        triggerMessage("Not a text file!");
+    }
+    reader.onload = readerEvent => {
+        content = readerEvent.target.result;
+        openFile = true;
+        if(document.getElementById("inputBox").value == ""){
+            document.getElementById("inputBox").value = content;
+        }
+        else{
+        onNewPress();
+        }
+    }
+}
+
+function triggerMessage(message){
+    if(!messageOn){
+    document.getElementById("messageSystem").innerHTML = message;
+    document.getElementById("messageSystem").style.top = "30px";
+    setTimeout(hideMessage,2000);
+    messageOn = true;
+    }
+    else{
+        document.getElementById("messageSystem").innerHTML = message;
+    }
+}
+
+function hideMessage(){
+    document.getElementById("messageSystem").style.top = "-30px";
+    messageOn = false;
+}
+
+function openUseful(){
+    document.getElementById("usefulDialog").style.opacity = "0";
+    document.getElementById("usefulDialog").style.display = "block";
+    setTimeout(actuallyOpenUseful,10);
+}
+
+function actuallyOpenUseful(){
+    document.getElementById("usefulDialog").style.transition = "0ms";
+    document.getElementById("usefulDialog").style.opacity = "0";
+    document.getElementById("usefulDialog").style.transition = "200ms";
+    document.getElementById("usefulDialog").style.opacity = "1";
+}
+
+function closeUseful(){
+    document.getElementById("usefulDialog").style.opacity = "0";
+    setTimeout(actuallyDisableUsefulDialog,200);
+}
+
+function actuallyDisableUsefulDialog(){
+    document.getElementById("usefulDialog").style.display = "none";
+}
+
+function triggerCopy(symbol){
+    navigator.clipboard.writeText(symbol);
+    triggerMessage("Copied " + symbol);
+    closeUseful();
+}
+
+
+window.onbeforeunload = function (e) {
+    e = e || window.event;
+
+    // For IE and Firefox prior to version 4
+    if (e) {
+        e.returnValue = 'Sure?';
+    }
+
+    // For Safari
+    return 'Sure?';
+};
+
+
