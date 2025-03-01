@@ -13,5 +13,5 @@
 ![Screenshot_20250228_230412](https://github.com/user-attachments/assets/accb16cb-94c8-4d54-8451-21c4408e6c93)<br>
 ![Screenshot_20250301_020435](https://github.com/user-attachments/assets/7eeb4135-08c8-4be1-86be-e3a62bc67a98)<br>
 ![Screenshot_20250301_030917](https://github.com/user-attachments/assets/8caf5474-b707-4242-9565-87b6db3cf00e)
-Press the bottom of the semi-hidden button to exit fullscreen mode
+Press the bottom of the semi-hidden hamburger (menu) button to exit fullscreen mode.
 
