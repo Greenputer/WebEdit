@@ -4,6 +4,7 @@
 [You can use it online here!](https://greenputer.github.io/WebEdit/)<br></h3>
 <h3>Features:</h3>
 <h4>･ Zero telemetry.<br>
+･ High-contrast dark theme that doesn't look bad.<br>
 ･ Built-in symbols to use and to better organize your work.<br>
 ･ Portable, run the HTML file anywhere and it will work without any internet connection. <br>
 ･ Fullscreen mode to hide everything unnecessary, and to better focus on your work. <br>
