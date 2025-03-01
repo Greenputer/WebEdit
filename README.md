@@ -4,10 +4,10 @@
 [You can use it online here!](https://greenputer.github.io/WebEdit/)<br></h3>
 <h3>Features:</h3>
 <h4>･ Zero telemetry.<br>
-･ Built-in symbols to copy.<br>
+･ Built-in symbols to use and to better organize your work.<br>
 ･ Portable, run the HTML file anywhere and it will work without any internet connection. <br>
-･ Fullscreen mode to hide everything unnecessary to better focus on your work. <br>
-･ Smooth animations.</h4><br>
+･ Fullscreen mode to hide everything unnecessary, and to better focus on your work. <br>
+･ Smooth animations, even on lower-end devices.</h4><br>
 
 ![Screenshot_20250228_230252](https://github.com/user-attachments/assets/6971c433-947f-4e13-b558-03f323156531)<br>
 ![Screenshot_20250228_230412](https://github.com/user-attachments/assets/accb16cb-94c8-4d54-8451-21c4408e6c93)<br>
